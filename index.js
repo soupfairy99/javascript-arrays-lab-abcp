@@ -17,14 +17,29 @@ appendKitten()
 function
 prependKitten()
 {return ["Arnold",...kittens]}
+
 function
 removeLastKitten()
-{var removeLastKitten = [kittens.slice(-1)];return removeLastKitten,kittens}
-/*function
+{return kittens.slice(0,kittens.length-1);}
+
+removeLastKitten();
+ function 
+ removeFirstKitten()
+ {return kittens.slice(1,kittens.length);}
+ removeLastKitten();
+/*
+describe('removeLastKitten()', function() {
+    it('removes the last kitten in the kittens array and returns a new array, leaving the kittens array unchanged', function() {
+      expect(removeLastKitten()).toEqual(["Milo", "Otis"])
+
+      expect(window.kittens).toEqual(["Milo", "Otis", "Garfield"])
+
+function
 removeFirstKitten()
-*/
-var removeFirstKitten = [kittens.slice(-2)]
-console.log(removeFirstKitten);
+{
+var removeFirstKitten = [kittens.slice(1,kittens.length -1)]; return removeFirstKitten,kittens}
+removeFirstKitten();
+
 
 
 
